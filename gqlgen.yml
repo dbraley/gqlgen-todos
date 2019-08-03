@@ -1,0 +1,25 @@
+# .gqlgen.yml example
+#
+# Refer to https://gqlgen.com/config/
+# for detailed .gqlgen.yml documentation.
+
+schema:
+- schema.graphql
+exec:
+  filename: generated.go
+model:
+  filename: models_gen.go
+resolver:
+  filename: resolver.go
+  type: Resolver
+autobind: []
+directives:
+  deprecated:
+    skip_runtime: true
+  include:
+    skip_runtime: true
+  skip:
+    skip_runtime: true
+models:
+  Todo:
+    model: github.com/dbraley/gqlgen-todos.Todo
